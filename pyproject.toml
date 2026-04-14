@@ -47,7 +47,7 @@ docs = [
 ]
 tests = [
     "coverage>=7.6.1",
-    "pytest>=9.0.0",
+    "pytest>=9.0.3",
     # Extensions
     "pytest-randomly>=3.15.0",
     # Reporting
