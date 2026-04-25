@@ -13,8 +13,8 @@ dependencies = [
     "pydantic-settings>=2.6.0",
     "darbiadev-shipping-types>=0.4.0",
     "typer>=0.12.5",
-    "rich>=13.9.3",
-    "pandas>=2.2.3",
+    "rich>=15.0.0",
+    "pandas>=3.0.2",
     "openpyxl>=3.1.5",
 ]
 
@@ -28,12 +28,12 @@ hermes = "hermes.cli.main:app"
 [dependency-groups]
 dev = [
     # DX
-    "nox>=2024.4.15",
-    "prek>=0.2.18",
+    "nox>=2026.4.10",
+    "prek>=0.3.9",
     # Linters
-    "ruff>=0.5.2",
-    "mypy>=1.10.1",
-    "ty>=0.0.12",
+    "ruff>=0.15.11",
+    "mypy>=1.20.1",
+    "ty>=0.0.31",
     # Types
     "pandas-stubs>=2.2.3.241009",
 ]
@@ -55,7 +55,7 @@ tests = [
 ]
 
 [build-system]
-requires = ["setuptools >= 80"]
+requires = ["setuptools>=82.0.1"]
 build-backend = "setuptools.build_meta"
 
 [tool.ruff]
