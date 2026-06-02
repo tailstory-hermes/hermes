@@ -12,7 +12,7 @@ requires-python = ">=3.14"
 dependencies = [
     "pydantic-settings>=2.14.1",
     "darbiadev-shipping-types>=0.4.0",
-    "typer>=0.25.1",
+    "typer>=0.26.1",
     "rich>=15.0.0",
     "pandas>=3.0.3",
     "openpyxl>=3.1.5",
@@ -29,11 +29,11 @@ hermes = "hermes.cli.main:app"
 dev = [
     # DX
     "nox>=2026.4.10",
-    "prek>=0.4.0",
+    "prek>=0.4.2",
     # Linters
-    "ruff>=0.15.13",
+    "ruff>=0.15.14",
     "mypy>=2.1.0",
-    "ty>=0.0.35",
+    "ty>=0.0.39",
     # Types
     "pandas-stubs>=2.2.3.241009",
 ]
