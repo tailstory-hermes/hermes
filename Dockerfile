@@ -1,6 +1,6 @@
 FROM python:3.14-alpine3.23
 
-COPY --from=ghcr.io/astral-sh/uv:0.11.21-alpine3.23@sha256:373dfd5043b1ceead32ef953f8970f3c694b6ccc8f9b2bb9fc21bf6cd665bfa2 /uv /bin/
+COPY --from=ghcr.io/astral-sh/uv:0.11.21@sha256:ff07b86af50d4d9391d9daf4ff89ce427bc544f9aae87057e69a1cc0aa369946 /uv /bin/
 
 COPY uv.lock pyproject.toml ./
 RUN uv sync --frozen --no-default-groups --no-install-project
