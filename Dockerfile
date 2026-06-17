@@ -1,6 +1,6 @@
-FROM python:3.14-slim@sha256:5b3879b6f3cb77e712644d50262d05a7c146b7312d784a18eff7ff5462e77033
+FROM python:3.14-alpine3.23
 
-COPY --from=ghcr.io/astral-sh/uv:0.9.26@sha256:9a23023be68b2ed09750ae636228e903a54a05ea56ed03a934d00fe9fbeded4b /uv /bin/
+COPY --from=ghcr.io/astral-sh/uv:0.11.21-alpine3.23@sha256:373dfd5043b1ceead32ef953f8970f3c694b6ccc8f9b2bb9fc21bf6cd665bfa2 /uv /bin/
 
 COPY uv.lock pyproject.toml ./
 RUN uv sync --frozen --no-default-groups --no-install-project
