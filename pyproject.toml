@@ -10,7 +10,7 @@ license = "MIT"
 license-files = ["LICEN[CS]E*"]
 requires-python = ">=3.14"
 dependencies = [
-    "pydantic-settings>=2.14.1",
+    "pydantic-settings>=2.14.2",
     "darbiadev-shipping-types>=0.4.0",
     "typer>=0.25.1",
     "rich>=15.0.0",
