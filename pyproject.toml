@@ -12,7 +12,7 @@ requires-python = ">=3.14"
 dependencies = [
     "pydantic-settings>=2.14.2",
     "darbiadev-shipping-types>=0.4.0",
-    "typer>=0.25.1",
+    "typer>=0.26.7",
     "rich>=15.0.0",
     "pandas>=3.0.3",
     "openpyxl>=3.1.5",
@@ -29,13 +29,13 @@ hermes = "hermes.cli.main:app"
 dev = [
     # DX
     "nox>=2026.4.10",
-    "prek>=0.4.0",
+    "prek>=0.4.5",
     # Linters
-    "ruff>=0.15.13",
+    "ruff>=0.15.17",
     "mypy>=2.1.0",
-    "ty>=0.0.35",
+    "ty>=0.0.49",
     # Types
-    "pandas-stubs>=2.2.3.241009",
+    "pandas-stubs>=3.0.3.260530",
 ]
 docs = [
     "sphinx>=7.4.4",
@@ -46,8 +46,8 @@ docs = [
     "releases>=2.1.1",
 ]
 tests = [
-    "coverage>=7.14.0",
-    "pytest>=9.0.3",
+    "coverage>=7.14.1",
+    "pytest>=9.1.0",
     # Extensions
     "pytest-randomly>=4.1.0",
     # Reporting
