@@ -31,9 +31,9 @@ dev = [
     "nox>=2026.4.10",
     "prek>=0.4.5",
     # Linters
-    "ruff>=0.15.17",
+    "ruff>=0.15.19",
     "mypy>=2.1.0",
-    "ty>=0.0.49",
+    "ty>=0.0.53",
     # Types
     "pandas-stubs>=3.0.3.260530",
 ]
@@ -46,8 +46,8 @@ docs = [
     "releases>=2.1.1",
 ]
 tests = [
-    "coverage>=7.14.1",
-    "pytest>=9.1.0",
+    "coverage>=7.14.3",
+    "pytest>=9.1.1",
     # Extensions
     "pytest-randomly>=4.1.0",
     # Reporting
