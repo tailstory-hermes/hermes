@@ -48,10 +48,6 @@ tests = [
     "pytest-randomly>=3.15.0",
 ]
 
-[tool.uv.sources]
-# Until tailstory-ups is on PyPI.
-tailstory-ups = { git = "https://github.com/tailstory-integrations/ups-sdk", branch = "main" }
-
 [tool.uv.build-backend]
 module-name = "hermes"
 

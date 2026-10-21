@@ -1259,7 +1259,7 @@ tests = [
 [package.metadata]
 requires-dist = [
     { name = "pydantic", specifier = ">=2.12.0" },
-    { name = "tailstory-ups", marker = "extra == 'ups'", git = "https://github.com/tailstory-integrations/ups-sdk?branch=main" },
+    { name = "tailstory-ups", marker = "extra == 'ups'", specifier = ">=1.0.0" },
 ]
 provides-extras = ["ups"]
 
@@ -1287,10 +1287,14 @@ tests = [
 [[package]]
 name = "tailstory-ups"
 version = "1.0.0"
-source = { git = "https://github.com/tailstory-integrations/ups-sdk?branch=main#459b529f75c5818c937d6b009819ce847716d719" }
+source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "niquests" },
     { name = "pydantic" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/b9/3f/92d713e45b7b85fa4c2ea421360f2d07045251d6b8c33ca9c4c40f772404/tailstory_ups-1.0.0.tar.gz", hash = "sha256:2eb44cf3c3181537a5633c036c5b4ef4cc2dbf0b4ee7fc87adf2c99c0159cafc", size = 6263, upload-time = "2026-10-21T14:26:13.386Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/21/96/702929b8a3294e1c59d46fe189726e6f5328cf6d0781d6759f889c5173fb/tailstory_ups-1.0.0-py3-none-any.whl", hash = "sha256:b48e23751b63b1338c4bdd4eb8ee9a8cf6ccdefde7ff0453bddb0a10498b52b6", size = 6499, upload-time = "2026-10-21T14:26:12.218Z" },
 ]
 
 [[package]]
