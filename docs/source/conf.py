@@ -88,6 +88,7 @@ def linkcode_resolve(domain: str, info: dict) -> str | None:
             last = first + len(lines) - 1
             filename += f"#L{first}-L{last}"
         except OSError, TypeError:
+            # No source lines to point at, so the link goes to the whole file.
             pass
 
     return f"{REPO_LINK}/blob/main/src/{filename}"
