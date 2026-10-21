@@ -10,8 +10,8 @@ project_metadata = metadata("tailstory-hermes")
 project: str = project_metadata["Name"]
 release: str = project_metadata["Version"]
 REPO_LINK: str = project_metadata["Project-URL"].replace("repository, ", "")
-copyright: str = "Darbia, 2023"  # noqa: A001
-author: str = "Bradley Reynolds"
+copyright: str = "Tailstory"  # noqa: A001
+author: str = "Tailstory team"
 
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named "sphinx.ext.*") or your custom
@@ -26,7 +26,7 @@ extensions = [
 ]
 
 autoapi_type: str = "python"
-autoapi_dirs: list[str] = ["../src"]
+autoapi_dirs: list[str] = ["../../src"]
 
 intersphinx_mapping = {"python": ("https://docs.python.org/3", None)}
 
@@ -87,7 +87,7 @@ def linkcode_resolve(domain: str, info: dict) -> str | None:
             lines, first = inspect.getsourcelines(val)
             last = first + len(lines) - 1
             filename += f"#L{first}-L{last}"
-        except (OSError, TypeError):
+        except OSError, TypeError:
             pass
 
     return f"{REPO_LINK}/blob/main/src/{filename}"
