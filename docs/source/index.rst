@@ -1,7 +1,7 @@
-hermes
-======
+tailstory-hermes
+================
 
-Shipping tooling
+One interface over the shipping carriers' SDKs
 
 Module Index
 ------------
