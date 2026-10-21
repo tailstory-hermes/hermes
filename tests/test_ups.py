@@ -5,6 +5,7 @@ from http import HTTPStatus
 from typing import Any
 
 import pytest
+from niquests import ConnectionError as NiquestsConnectionError
 from niquests import HTTPError, Response
 from ups_sdk.models import TrackApiResponse, TrackResponse
 
@@ -152,6 +153,14 @@ def test_a_refused_request_is_a_carrier_error() -> None:
 
     assert not isinstance(raised.value, TrackingNotFoundError)
     assert raised.value.status_code == HTTPStatus.FORBIDDEN
+
+
+def test_an_unreachable_ups_is_a_carrier_error() -> None:
+    """A request that never got an answer raises CarrierError without a status."""
+    with pytest.raises(CarrierError) as raised:
+        UPSCarrier(_FakeUPS(error=NiquestsConnectionError("Connection refused"))).track(NUMBER)  # type: ignore[arg-type]
+
+    assert raised.value.status_code is None
 
 
 def test_a_not_found_warning_is_not_found() -> None:

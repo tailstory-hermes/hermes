@@ -57,11 +57,12 @@ class UPSCarrier:
         TrackingNotFoundError
             If UPS has no tracking for the number.
         CarrierError
-            If UPS refused or failed the request.
+            If UPS refused or failed the request, or could not be reached.
         """
         try:
             answer = self.client.get_tracking(tracking_number)
-        except niquests.HTTPError as error:
+        except niquests.RequestException as error:
+            # A refusal carries UPS's answer; a timeout or dropped connection has none.
             status_code = None if error.response is None else error.response.status_code
             if status_code == HTTPStatus.NOT_FOUND:
                 raise TrackingNotFoundError(self.carrier, str(error), status_code) from error
