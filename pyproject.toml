@@ -50,7 +50,7 @@ tests = [
 
 [tool.uv.sources]
 # Until tailstory-ups is on PyPI.
-tailstory-ups = { git = "https://github.com/tailstory-integrations/ups-sdk", branch = "claude/project-thread-tky53w" }
+tailstory-ups = { git = "https://github.com/tailstory-integrations/ups-sdk", branch = "main" }
 
 [tool.uv.build-backend]
 module-name = "hermes"

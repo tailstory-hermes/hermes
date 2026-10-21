@@ -1259,7 +1259,7 @@ tests = [
 [package.metadata]
 requires-dist = [
     { name = "pydantic", specifier = ">=2.12.0" },
-    { name = "tailstory-ups", marker = "extra == 'ups'", git = "https://github.com/tailstory-integrations/ups-sdk?branch=claude%2Fproject-thread-tky53w" },
+    { name = "tailstory-ups", marker = "extra == 'ups'", git = "https://github.com/tailstory-integrations/ups-sdk?branch=main" },
 ]
 provides-extras = ["ups"]
 
@@ -1287,7 +1287,7 @@ tests = [
 [[package]]
 name = "tailstory-ups"
 version = "1.0.0"
-source = { git = "https://github.com/tailstory-integrations/ups-sdk?branch=claude%2Fproject-thread-tky53w#43083561ca71f48728aa3d1d7588fafa1fb521d1" }
+source = { git = "https://github.com/tailstory-integrations/ups-sdk?branch=main#459b529f75c5818c937d6b009819ce847716d719" }
 dependencies = [
     { name = "niquests" },
     { name = "pydantic" },
