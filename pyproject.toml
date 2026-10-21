@@ -31,6 +31,8 @@ dev = [
     "mypy>=1.10.1",
 ]
 docs = [
+    # autoapi and linkcode import every module, the carrier adapters included.
+    "tailstory-hermes[ups]",
     "sphinx>=7.4.4",
     # Theme
     "furo>=2024.5.6",
